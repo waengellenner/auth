@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
         # 3. if they know their password -> login is successful
         flash["notice"] = "Yes!"
         session["user_id"] = @user["id"]
-        redirect_to "/companies"
+        redirect_to "/tasks"
       else
         flash["notice"] = "Nope."
         redirect_to "/sessions/new"
